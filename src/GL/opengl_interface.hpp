@@ -1,5 +1,5 @@
 #pragma once
-
+#define GL_SILENCE_DEPRECATION
 #include "../config.hpp"
 #include "../geometry.hpp"
 #include "displayable.hpp"

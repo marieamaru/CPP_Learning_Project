@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build",
+  "command": "/usr/bin/clang++ -DGLUT_DISABLE_ATEXIT_HACK -isystem \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/FreeGLUT::freeglut\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks -isystem /usr/local/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wall -Wextra -Werror -Wshadow -Weffc++ -std=gnu++17 -o CMakeFiles/tower.dir/src/GL/opengl_interface.cpp.o -c \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/GL/opengl_interface.cpp\"",
+  "file": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/GL/opengl_interface.cpp"
+},
+{
+  "directory": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build",
+  "command": "/usr/bin/clang++ -DGLUT_DISABLE_ATEXIT_HACK -isystem \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/FreeGLUT::freeglut\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks -isystem /usr/local/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wall -Wextra -Werror -Wshadow -Weffc++ -std=gnu++17 -o CMakeFiles/tower.dir/src/img/image.cpp.o -c \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/img/image.cpp\"",
+  "file": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/img/image.cpp"
+},
+{
+  "directory": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build",
+  "command": "/usr/bin/clang++ -DGLUT_DISABLE_ATEXIT_HACK -isystem \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/FreeGLUT::freeglut\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks -isystem /usr/local/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wall -Wextra -Werror -Wshadow -Weffc++ -std=gnu++17 -o CMakeFiles/tower.dir/src/aircraft.cpp.o -c \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft.cpp\"",
+  "file": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft.cpp"
+},
+{
+  "directory": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build",
+  "command": "/usr/bin/clang++ -DGLUT_DISABLE_ATEXIT_HACK -isystem \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/FreeGLUT::freeglut\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks -isystem /usr/local/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wall -Wextra -Werror -Wshadow -Weffc++ -std=gnu++17 -o CMakeFiles/tower.dir/src/tower_sim.cpp.o -c \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower_sim.cpp\"",
+  "file": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower_sim.cpp"
+},
+{
+  "directory": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build",
+  "command": "/usr/bin/clang++ -DGLUT_DISABLE_ATEXIT_HACK -isystem \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/FreeGLUT::freeglut\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks -isystem /usr/local/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wall -Wextra -Werror -Wshadow -Weffc++ -std=gnu++17 -o CMakeFiles/tower.dir/src/tower.cpp.o -c \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower.cpp\"",
+  "file": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower.cpp"
+},
+{
+  "directory": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build",
+  "command": "/usr/bin/clang++ -DGLUT_DISABLE_ATEXIT_HACK -isystem \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/FreeGLUT::freeglut\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks -isystem /usr/local/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wall -Wextra -Werror -Wshadow -Weffc++ -std=gnu++17 -o CMakeFiles/tower.dir/src/main.cpp.o -c \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/main.cpp\"",
+  "file": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/main.cpp"
+}
+]

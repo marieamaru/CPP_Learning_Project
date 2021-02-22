@@ -1,3 +1,4 @@
+#define GL_SILENCE_DEPRECATION
 #include "opengl_interface.hpp"
 
 namespace GL {

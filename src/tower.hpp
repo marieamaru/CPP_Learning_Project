@@ -5,7 +5,8 @@
 #include <cassert>
 #include <algorithm>
 #include <unordered_map>
-
+#include <vector>
+#include <algorithm>
 class Airport;
 class Aircraft;
 class Terminal;

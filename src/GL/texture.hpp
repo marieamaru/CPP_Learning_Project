@@ -1,8 +1,8 @@
 #pragma once
 
+#define GL_SILENCE_DEPRECATION
 #include "../img/image.hpp"
 #include "opengl_interface.hpp"
-
 #include <GL/glut.h>
 #include <array>
 
