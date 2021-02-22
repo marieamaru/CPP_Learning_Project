@@ -8,27 +8,65 @@ Compilez et lancez le programme.
 
 Allez dans le fichier tower_sim.cpp et rechercher la fonction responsable des inputs du programme.
 Sur quelle touche faut-il appuyer pour ajouter un avion ?
+Il faut appuyer sur la touche 'c'.
 Comment faire pour quitter le programme ?
+Il faut appuyer sur la touche 'x'.
 A quoi sert la touche 'F' ?
-
+A passer en mode plein écran.
 Ajoutez un avion à la simulation et attendez.
 Que est le comportement de l'avion ?
+Il arrive et attérit sur la piste d'attérissage et roule jusqu"à une zone précise, puis il retourne
+sur la piste et redécolle. 
 Quelles informations s'affichent dans la console ?
-
+DL6810 is now landing...
+now servicing DL6810...
+done servicing EY5350
+DL6810 lift off
 Ajoutez maintenant quatre avions d'un coup dans la simulation.
 Que fait chacun des avions ?
+Chaque avion suit son chemin et n'est pas perturbé par les autres.
 
 
 ## Analyse du code
 
 Listez les classes du programme à la racine du dossier src/.
 Pour chacune d'entre elle, expliquez ce qu'elle représente et son rôle dans le programme.
+Aircraft :
+    représente l'avion et ses caractéristiques, gère les avions dans le programme et sa position
+    -const std::string& get_flight_num() const; retourne le numéro de vol
+    -float distance_to(const Point3D& p) const; retourne la distance entre l'avion et un point
+    -void display() const override; affiche l'avion dans l'interface
+    -void move() override; déplace l'avion, s'il est au sol vérifie qu'il peut décoller puis ajuste la vitesse
+AirportType
+    représente les zones de l'aéroport : le terminal, les pistes
+Airport
+    représente l'aéroport et ses lieux, permet de réserver un terminal pour les avions 
+    -Tower& get_tower(); retourne la tour de l'aéroport
+    -void display() const override; affiche l'aéroport sur le terminal
+    -void move() override; actualise les terminaux de l'aéroport
+Terminal
+    représente un terminal dans l'aéroport et gère les avions qui sont liés en fonction des vols
+    -bool in_use() const; retourne vrai si l'avion existe
+    -bool is_servicing() const; indique si l'avion a fini ses cycles de service et est toujours en service
+    -void assign_craft(const Aircraft& aircraft) ; assigne l'avion au terminal en question 
+    -void start_service(const Aircraft& aircraft); si l'avion est proche du terminal, cela débute son service
+    -void finish_service(); termine le service d'un avion
+    -void move() override; incrémente les cycles de service
+TowerSimulation
+    permet d'interagir avec le programme, d'ajouter des avions
+Tower
+    fais le lien entre les avions et les terminaux
+    -WaypointQueue get_instructions(Aircraft& aircraft); si un avion est proche d'un aéroport, cela emmène l'avion dans son terminal
+    -void arrived_at_terminal(const Aircraft& aircraft); change le statut de l'avion s'il est arrivé à un terminal
+Waypoint
+    gère les coordonnées d'un avion et sa position
 
 Pour les classes `Tower`, `Aircaft`, `Airport` et `Terminal`, listez leurs fonctions-membre publiques et expliquez précisément à quoi elles servent.
 Réalisez ensuite un schéma entre ces difféntes classes pour illustrer comment elles intéragissent ensemble. 
 
-Quelles classes et fonctions sont impliquées dans la génération du chemin d'un avion ?
+Quelles classes et fonctions sont impliquées dans la génération du chemin d'un avion ? Waypoint
 Quel conteneur de la librairie standard a été choisi pour représenter le chemin ?
+deque
 Expliquez pourquoi ce choix a été fait.
 
 
