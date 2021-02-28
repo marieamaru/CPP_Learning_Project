@@ -24,7 +24,7 @@ done servicing EY5350
 DL6810 lift off
 Ajoutez maintenant quatre avions d'un coup dans la simulation.
 Que fait chacun des avions ?
-Chaque avion suit son chemin et n'est pas perturbé par les autres.
+Les trois premiers avions atterissent et le dernier attend qu'il y est un terminal libre pour attérir.
 
 
 ## Analyse du code
@@ -73,12 +73,16 @@ Expliquez pourquoi ce choix a été fait.
 ## Bidouillons !
 
 1) Déterminez à quel endroit du code sont définies les vitesses maximales et accélération de chaque avion.
+Dans la classe aircraft_type. 
 Le Concorde est censé pouvoir voler plus vite que les autres avions.
 Modifiez le programme pour tenir compte de cela.
+on modifie la vitesse maximale de l'avion concorde au niveau de la classe Aircraft_types.
 
 2) Identifiez quelle variable contrôle le framerate de la simulation.
 Ajoutez deux nouveaux inputs au programme permettant d'augmenter ou de diminuer cette valeur.
+On ajoute deux méthode increase_framerate et decrease_framerate afin de modifier cette valeur.
 Essayez maintenant de mettre en pause le programme en manipulant ce framerate. Que se passe-t-il ? Fixez le problème.
+On doit empêcher le framerate de devenir nul et empêcher le programme de planter.
 
 3) Identifiez quelle variable contrôle le temps de débarquement des avions et doublez-le.
 

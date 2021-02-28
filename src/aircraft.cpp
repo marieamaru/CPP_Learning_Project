@@ -52,7 +52,7 @@ void Aircraft::arrive_at_terminal()
 }
 
 // deploy and retract landing gear depending on next waypoints
-void Aircraft::operate_landing_gear()
+bool Aircraft::operate_landing_gear()
 {
     if (waypoints.size() > 1u)
     {
@@ -63,6 +63,7 @@ void Aircraft::operate_landing_gear()
         if (ground_before && !ground_after)
         {
             std::cout << flight_number << " lift off" << std::endl;
+            
         }
         else if (!ground_before && ground_after)
         {
@@ -71,9 +72,20 @@ void Aircraft::operate_landing_gear()
         }
         else if (!ground_before && !ground_after)
         {
+            if(landing_gear_deployed)
+            {
+                const auto ite = std::find(GL::display_queue.begin(), GL::display_queue.end(), this);
+                if (ite != GL::display_queue.end())
+                {
+                    GL::display_queue.erase(ite);
+                }
+                return true;
+            }
             landing_gear_deployed = false;
+
         }
     }
+    return false;
 }
 
 void Aircraft::add_waypoint(const Waypoint& wp, const bool front)
@@ -88,8 +100,9 @@ void Aircraft::add_waypoint(const Waypoint& wp, const bool front)
     }
 }
 
-void Aircraft::move()
+bool Aircraft::move()
 {
+    bool end = false;
     if (waypoints.empty())
     {
         waypoints = control.get_instructions(*this);
@@ -110,7 +123,7 @@ void Aircraft::move()
             }
             else
             {
-                operate_landing_gear();
+                end = operate_landing_gear();
             }
             waypoints.pop_front();
         }
@@ -136,6 +149,7 @@ void Aircraft::move()
         // update the z-value of the displayable structure
         GL::Displayable::z = pos.x() + pos.y();
     }
+    return end;
 }
 
 void Aircraft::display() const

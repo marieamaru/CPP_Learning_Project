@@ -2,6 +2,7 @@
 
 class Airport;
 struct AircraftType;
+class Aircraft;
 
 class TowerSimulation
 {
@@ -14,6 +15,7 @@ private:
 
     void create_aircraft(const AircraftType& type) const;
     void create_random_aircraft() const;
+    void delete_aircraft(const Aircraft& aircraft) const;
 
     void create_keystrokes() const;
     void display_help() const;

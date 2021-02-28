@@ -33,5 +33,7 @@ void change_zoom(const float factor);
 void init_gl(int argc, char** argv, const char* title);
 void loop();
 void exit_loop();
+void decrease_framerate();
+void increase_framerate();
 
 } // namespace GL

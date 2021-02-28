@@ -7,11 +7,13 @@ namespace GL {
 class DynamicObject
 {
 public:
-    virtual ~DynamicObject() {}
+ 
+    virtual ~DynamicObject() {
+        //move_queue.erase(this);
+    }
 
-    virtual void move() = 0;
+    virtual bool move() = 0;
 };
-
 inline std::unordered_set<DynamicObject*> move_queue;
 
 } // namespace GL

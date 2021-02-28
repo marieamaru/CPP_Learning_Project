@@ -56,6 +56,8 @@ void TowerSimulation::create_keystrokes() const
     GL::keystrokes.emplace('+', []() { GL::change_zoom(0.95f); });
     GL::keystrokes.emplace('-', []() { GL::change_zoom(1.05f); });
     GL::keystrokes.emplace('f', []() { GL::toggle_fullscreen(); });
+    GL::keystrokes.emplace('m', []() { GL::increase_framerate();});
+    GL::keystrokes.emplace('l', []() { GL::decrease_framerate();});
 }
 
 void TowerSimulation::display_help() const
@@ -79,7 +81,12 @@ void TowerSimulation::init_airport()
     GL::display_queue.emplace_back(airport);
     GL::move_queue.emplace(airport);
 }
-
+/*
+void TowerSimulation::delete_aircraft(const Aircraft& aircraft) const
+{
+    std::cout << aicraft << std:endl;
+}
+*/
 void TowerSimulation::launch()
 {
     if (help)

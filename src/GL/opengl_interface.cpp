@@ -74,9 +74,19 @@ void display(void)
 
 void timer(const int step)
 {
-    for (auto& item : move_queue)
+    for (auto item = move_queue.begin();item!= move_queue.end();)
     {
-        item->move();
+
+        if((*item)->move())
+        {
+                
+            item=move_queue.erase(item);
+
+        }
+        else
+        {
+            item++;
+        }
     }
     glutPostRedisplay();
     glutTimerFunc(1000u / ticks_per_sec, timer, step + 1);
@@ -114,4 +124,19 @@ void exit_loop()
     glutLeaveMainLoop();
 }
 
+void increase_framerate()
+{
+    ticks_per_sec++;
+    std::cout << "Framerate was increased" << std::endl;
+}
+
+void decrease_framerate()
+{
+    ticks_per_sec--;
+    std::cout << "Framerate was decreased" << std::endl;
+    if(ticks_per_sec<=0)
+    {
+        ticks_per_sec++;
+    }
+}
 } // namespace GL
