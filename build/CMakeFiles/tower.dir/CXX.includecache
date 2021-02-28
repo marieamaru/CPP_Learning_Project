@@ -92,42 +92,6 @@ img/media_path.hpp
 array
 -
 
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/airport.hpp
-GL/displayable.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/GL/displayable.hpp
-GL/dynamic_object.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/GL/dynamic_object.hpp
-GL/texture.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/GL/texture.hpp
-airport_type.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/airport_type.hpp
-geometry.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/geometry.hpp
-img/image.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/img/image.hpp
-runway.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/runway.hpp
-terminal.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/terminal.hpp
-tower.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower.hpp
-vector
--
-
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/airport_type.hpp
-geometry.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/geometry.hpp
-runway.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/runway.hpp
-terminal.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/terminal.hpp
-waypoint.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/waypoint.hpp
-initializer_list
--
-vector
--
-
 /Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/config.hpp
 img/media_path.hpp
 /Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/img/media_path.hpp
@@ -200,26 +164,6 @@ intrin.h
 arm_neon.h
 -
 
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/runway.hpp
-geometry.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/geometry.hpp
-
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/terminal.hpp
-GL/dynamic_object.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/GL/dynamic_object.hpp
-aircraft.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft.hpp
-geometry.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/geometry.hpp
-
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower.cpp
-tower.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower.hpp
-airport.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/airport.hpp
-terminal.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/terminal.hpp
-
 /Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower.hpp
 waypoint.hpp
 /Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/waypoint.hpp
@@ -233,28 +177,6 @@ vector
 -
 algorithm
 -
-
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower_sim.cpp
-tower_sim.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower_sim.hpp
-GL/opengl_interface.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/GL/opengl_interface.hpp
-aircraft.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft.hpp
-airport.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/airport.hpp
-config.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/config.hpp
-img/image.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/img/image.hpp
-img/media_path.hpp
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/img/media_path.hpp
-cstdlib
--
-ctime
--
-
-/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower_sim.hpp
 
 /Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/waypoint.hpp
 geometry.hpp
