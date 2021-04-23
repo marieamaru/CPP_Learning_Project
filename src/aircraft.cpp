@@ -20,6 +20,11 @@ void Aircraft::turn_to_waypoint()
     }
 }
 
+bool Aircraft::operator<(const Aircraft a)
+{
+   return a.has_terminal() && fuel < a.fuel;
+} 
+
 void Aircraft::turn(Point3D direction)
 {
     (speed += direction.cap_length(type.max_accel)).cap_length(max_speed());
@@ -52,7 +57,7 @@ void Aircraft::arrive_at_terminal()
 }
 
 // deploy and retract landing gear depending on next waypoints
-bool Aircraft::operate_landing_gear()
+void Aircraft::operate_landing_gear()
 {
     if (waypoints.size() > 1u)
     {
@@ -63,7 +68,6 @@ bool Aircraft::operate_landing_gear()
         if (ground_before && !ground_after)
         {
             std::cout << flight_number << " lift off" << std::endl;
-            
         }
         else if (!ground_before && ground_after)
         {
@@ -72,23 +76,12 @@ bool Aircraft::operate_landing_gear()
         }
         else if (!ground_before && !ground_after)
         {
-            if(landing_gear_deployed)
-            {
-                const auto ite = std::find(GL::display_queue.begin(), GL::display_queue.end(), this);
-                if (ite != GL::display_queue.end())
-                {
-                    GL::display_queue.erase(ite);
-                }
-                return true;
-            }
             landing_gear_deployed = false;
-
         }
     }
-    return false;
 }
 
-void Aircraft::add_waypoint(const Waypoint& wp, const bool front)
+void Aircraft::add_waypoint(const Waypoint& wp)
 {
     if (front)
     {
@@ -100,20 +93,41 @@ void Aircraft::add_waypoint(const Waypoint& wp, const bool front)
     }
 }
 
-bool Aircraft::move()
+bool Aircraft::update()
 {
-    bool end = false;
     if (waypoints.empty())
     {
-        waypoints = control.get_instructions(*this);
+        if (is_service_done)
+        {
+            return false;
+        }
     }
-
+    if(is_circling())
+    {
+        
+        auto chemins = control.reserve_terminal(*this);
+        if(!chemins.empty())
+        {
+            for(auto chemin : chemins)
+            {
+                add_waypoint(chemin);
+            }
+        }
+        
+    }
+    if (waypoints.empty())
+    {
+        for (const auto& wp: control.get_instructions(*this))
+        {
+            add_waypoint(wp);
+        }
+    }
+    
     if (!is_at_terminal)
     {
         turn_to_waypoint();
         // move in the direction of the current speed
         pos += speed;
-
         // if we are close to our next waypoint, stike if off the list
         if (!waypoints.empty() && distance_to(waypoints.front()) < DISTANCE_THRESHOLD)
         {
@@ -123,7 +137,7 @@ bool Aircraft::move()
             }
             else
             {
-                end = operate_landing_gear();
+                operate_landing_gear();
             }
             waypoints.pop_front();
         }
@@ -138,6 +152,11 @@ bool Aircraft::move()
         }
         else
         {
+            fuel--;
+            if(fuel<=0)
+            {
+                throw AircraftCrash { flight_number + " crashed into the ground" };
+            }
             // if we are in the air, but too slow, then we will sink!
             const float speed_len = speed.length();
             if (speed_len < SPEED_THRESHOLD)
@@ -149,10 +168,38 @@ bool Aircraft::move()
         // update the z-value of the displayable structure
         GL::Displayable::z = pos.x() + pos.y();
     }
-    return end;
+
+    return true;
 }
 
 void Aircraft::display() const
 {
     type.texture.draw(project_2D(pos), { PLANE_TEXTURE_DIM, PLANE_TEXTURE_DIM }, get_speed_octant());
+}
+
+bool Aircraft::has_terminal() const
+{
+    return !waypoints.empty() && waypoints.back().type == wp_terminal;
+}
+
+bool Aircraft::is_circling() const
+{
+    return !is_at_terminal && !is_service_done && !has_terminal();
+}
+
+bool Aircraft::is_low_on_fuel() const 
+{
+    return fuel < 200;
+}
+
+void Aircraft::refill(int& fuel_stock)
+{
+    int compt = 0;
+    while (fuel_stock>0 && fuel<3000)
+    {
+        fuel++;
+        compt++;
+        fuel_stock--;
+    }
+    std::cout << flight_number << "refilled with " << compt << "of fuel" << std::endl;
 }

@@ -118,9 +118,35 @@ CMakeFiles/tower.dir/src/aircraft.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tower.dir/src/aircraft.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft.cpp" -o CMakeFiles/tower.dir/src/aircraft.cpp.s
 
+CMakeFiles/tower.dir/src/aircraft_manager.cpp.o: CMakeFiles/tower.dir/flags.make
+CMakeFiles/tower.dir/src/aircraft_manager.cpp.o: ../src/aircraft_manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tower.dir/src/aircraft_manager.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tower.dir/src/aircraft_manager.cpp.o -c "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft_manager.cpp"
+
+CMakeFiles/tower.dir/src/aircraft_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tower.dir/src/aircraft_manager.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft_manager.cpp" > CMakeFiles/tower.dir/src/aircraft_manager.cpp.i
+
+CMakeFiles/tower.dir/src/aircraft_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tower.dir/src/aircraft_manager.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft_manager.cpp" -o CMakeFiles/tower.dir/src/aircraft_manager.cpp.s
+
+CMakeFiles/tower.dir/src/aircraft_factory.cpp.o: CMakeFiles/tower.dir/flags.make
+CMakeFiles/tower.dir/src/aircraft_factory.cpp.o: ../src/aircraft_factory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tower.dir/src/aircraft_factory.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tower.dir/src/aircraft_factory.cpp.o -c "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft_factory.cpp"
+
+CMakeFiles/tower.dir/src/aircraft_factory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tower.dir/src/aircraft_factory.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft_factory.cpp" > CMakeFiles/tower.dir/src/aircraft_factory.cpp.i
+
+CMakeFiles/tower.dir/src/aircraft_factory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tower.dir/src/aircraft_factory.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft_factory.cpp" -o CMakeFiles/tower.dir/src/aircraft_factory.cpp.s
+
 CMakeFiles/tower.dir/src/tower_sim.cpp.o: CMakeFiles/tower.dir/flags.make
 CMakeFiles/tower.dir/src/tower_sim.cpp.o: ../src/tower_sim.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tower.dir/src/tower_sim.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tower.dir/src/tower_sim.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tower.dir/src/tower_sim.cpp.o -c "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower_sim.cpp"
 
 CMakeFiles/tower.dir/src/tower_sim.cpp.i: cmake_force
@@ -133,7 +159,7 @@ CMakeFiles/tower.dir/src/tower_sim.cpp.s: cmake_force
 
 CMakeFiles/tower.dir/src/tower.cpp.o: CMakeFiles/tower.dir/flags.make
 CMakeFiles/tower.dir/src/tower.cpp.o: ../src/tower.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tower.dir/src/tower.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tower.dir/src/tower.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tower.dir/src/tower.cpp.o -c "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower.cpp"
 
 CMakeFiles/tower.dir/src/tower.cpp.i: cmake_force
@@ -146,7 +172,7 @@ CMakeFiles/tower.dir/src/tower.cpp.s: cmake_force
 
 CMakeFiles/tower.dir/src/main.cpp.o: CMakeFiles/tower.dir/flags.make
 CMakeFiles/tower.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tower.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/tower.dir/src/main.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tower.dir/src/main.cpp.o -c "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/main.cpp"
 
 CMakeFiles/tower.dir/src/main.cpp.i: cmake_force
@@ -162,6 +188,8 @@ tower_OBJECTS = \
 "CMakeFiles/tower.dir/src/GL/opengl_interface.cpp.o" \
 "CMakeFiles/tower.dir/src/img/image.cpp.o" \
 "CMakeFiles/tower.dir/src/aircraft.cpp.o" \
+"CMakeFiles/tower.dir/src/aircraft_manager.cpp.o" \
+"CMakeFiles/tower.dir/src/aircraft_factory.cpp.o" \
 "CMakeFiles/tower.dir/src/tower_sim.cpp.o" \
 "CMakeFiles/tower.dir/src/tower.cpp.o" \
 "CMakeFiles/tower.dir/src/main.cpp.o"
@@ -172,6 +200,8 @@ tower_EXTERNAL_OBJECTS =
 tower: CMakeFiles/tower.dir/src/GL/opengl_interface.cpp.o
 tower: CMakeFiles/tower.dir/src/img/image.cpp.o
 tower: CMakeFiles/tower.dir/src/aircraft.cpp.o
+tower: CMakeFiles/tower.dir/src/aircraft_manager.cpp.o
+tower: CMakeFiles/tower.dir/src/aircraft_factory.cpp.o
 tower: CMakeFiles/tower.dir/src/tower_sim.cpp.o
 tower: CMakeFiles/tower.dir/src/tower.cpp.o
 tower: CMakeFiles/tower.dir/src/main.cpp.o
@@ -183,7 +213,7 @@ tower: /usr/local/lib/libXrandr.dylib
 tower: /usr/local/lib/libXxf86vm.dylib
 tower: /usr/local/lib/libXi.dylib
 tower: CMakeFiles/tower.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable tower"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable tower"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tower.dir/link.txt --verbose=$(VERBOSE)
 	/usr/local/Cellar/cmake/3.19.2/bin/cmake -E copy_directory /Users/macbookairdemarie/Desktop/M1/Semestre\ 2/C++/CPP_Learning_Project/CPP_Learning_Project/media /Users/macbookairdemarie/Desktop/M1/Semestre\ 2/C++/CPP_Learning_Project/CPP_Learning_Project/build/media
 

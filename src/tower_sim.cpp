@@ -7,12 +7,13 @@
 #include "img/image.hpp"
 #include "img/media_path.hpp"
 
+#include <algorithm>
+#include <cassert>
 #include <cstdlib>
 #include <ctime>
+#include <memory>
 
 using namespace std::string_literals;
-
-const std::string airlines[8] = { "AF", "LH", "EY", "DL", "KL", "BA", "AY", "EY" };
 
 TowerSimulation::TowerSimulation(int argc, char** argv) :
     help { (argc > 1) && (std::string { argv[1] } == "--help"s || std::string { argv[1] } == "-h"s) }
@@ -22,6 +23,7 @@ TowerSimulation::TowerSimulation(int argc, char** argv) :
     GL::init_gl(argc, argv, "Airport Tower Simulation");
 
     create_keystrokes();
+    GL::move_queue.emplace(&manager);
 }
 
 TowerSimulation::~TowerSimulation()
@@ -29,45 +31,48 @@ TowerSimulation::~TowerSimulation()
     delete airport;
 }
 
-void TowerSimulation::create_aircraft(const AircraftType& type) const
-{
-    assert(airport); // make sure the airport is initialized before creating aircraft
 
-    const std::string flight_number = airlines[std::rand() % 8] + std::to_string(1000 + (rand() % 9000));
-    const float angle       = (rand() % 1000) * 2 * 3.141592f / 1000.f; // random angle between 0 and 2pi
-    const Point3D start     = Point3D { std::sin(angle), std::cos(angle), 0 } * 3 + Point3D { 0, 0, 2 };
-    const Point3D direction = (-start).normalize();
-
-    Aircraft* aircraft = new Aircraft { type, flight_number, start, direction, airport->get_tower() };
-    GL::display_queue.emplace_back(aircraft);
-    GL::move_queue.emplace(aircraft);
-}
-
-void TowerSimulation::create_random_aircraft() const
-{
-    create_aircraft(*(aircraft_types[rand() % 3]));
-}
-
-void TowerSimulation::create_keystrokes() const
+void TowerSimulation::create_keystrokes()
 {
     GL::keystrokes.emplace('x', []() { GL::exit_loop(); });
     GL::keystrokes.emplace('q', []() { GL::exit_loop(); });
-    GL::keystrokes.emplace('c', [this]() { create_random_aircraft(); });
+    GL::keystrokes.emplace('c', [this]() { manager.add(manager.generate_aircraft(airport->get_tower())); });
     GL::keystrokes.emplace('+', []() { GL::change_zoom(0.95f); });
     GL::keystrokes.emplace('-', []() { GL::change_zoom(1.05f); });
     GL::keystrokes.emplace('f', []() { GL::toggle_fullscreen(); });
-    GL::keystrokes.emplace('m', []() { GL::increase_framerate();});
-    GL::keystrokes.emplace('l', []() { GL::decrease_framerate();});
+
+    // TASK_0 C-2: framerate control
+    // Framerate cannot equal 0 or the program would get stuck / crash.
+    // Also, in a "real" program, the maximal framerate should always be capped (you can see why if you do the
+    // bonus part).
+    GL::keystrokes.emplace('l', []() { GL::ticks_per_sec = std::max(GL::ticks_per_sec - 1u, 1u); });
+    GL::keystrokes.emplace('m', []() { GL::ticks_per_sec = std::min(GL::ticks_per_sec + 1u, 180u); });
+
+    // TASK_0 C-2: pause
+    // Since the framerate cannot be 0, we introduce a new variable to manage this info.
+    // Also, it would make no sense to use the framerate to simulate the pause, cause how would we unpause if
+    // the program is not running anymore ?
+    GL::keystrokes.emplace('p', []() { GL::is_paused = !GL::is_paused; });
+    GL::keystrokes.emplace('z', [this]() { manager.get_crashes(); } );
+    GL::keystrokes.emplace('a', [this]() { manager.count_airlines(0); });
+    GL::keystrokes.emplace('u', [this]() { manager.count_airlines(1); });
+    GL::keystrokes.emplace('d', [this]() { manager.count_airlines(2); });
+    GL::keystrokes.emplace('t', [this]() { manager.count_airlines(3); });
+    GL::keystrokes.emplace('w', [this]() { manager.count_airlines(4); });
+    GL::keystrokes.emplace('g', [this]() { manager.count_airlines(5); });
+    GL::keystrokes.emplace('s', [this]() { manager.count_airlines(6); });
+    GL::keystrokes.emplace('y', [this]() { manager.count_airlines(7); });
 }
+
 
 void TowerSimulation::display_help() const
 {
     std::cout << "This is an airport tower simulator" << std::endl
               << "the following keysstrokes have meaning:" << std::endl;
 
-    for (const auto& ks_pair : GL::keystrokes)
+    for (const auto& [key,value] : GL::keystrokes)
     {
-        std::cout << ks_pair.first << ' ';
+        std::cout << key << ' ';
     }
 
     std::cout << std::endl;
@@ -75,18 +80,12 @@ void TowerSimulation::display_help() const
 
 void TowerSimulation::init_airport()
 {
-    airport = new Airport { one_lane_airport, Point3D { 0, 0, 0 },
-                            new img::Image { one_lane_airport_sprite_path.get_full_path() } };
+    airport = new Airport {one_lane_airport, Point3D { 0, 0, 0 },
+                            new img::Image { one_lane_airport_sprite_path.get_full_path() },manager };
 
-    GL::display_queue.emplace_back(airport);
     GL::move_queue.emplace(airport);
 }
-/*
-void TowerSimulation::delete_aircraft(const Aircraft& aircraft) const
-{
-    std::cout << aicraft << std:endl;
-}
-*/
+
 void TowerSimulation::launch()
 {
     if (help)
@@ -100,4 +99,3 @@ void TowerSimulation::launch()
 
     GL::loop();
 }
-

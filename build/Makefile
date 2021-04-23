@@ -199,6 +199,60 @@ src/aircraft.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower.dir/build.make CMakeFiles/tower.dir/src/aircraft.cpp.s
 .PHONY : src/aircraft.cpp.s
 
+src/aircraft_factory.o: src/aircraft_factory.cpp.o
+
+.PHONY : src/aircraft_factory.o
+
+# target to build an object file
+src/aircraft_factory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower.dir/build.make CMakeFiles/tower.dir/src/aircraft_factory.cpp.o
+.PHONY : src/aircraft_factory.cpp.o
+
+src/aircraft_factory.i: src/aircraft_factory.cpp.i
+
+.PHONY : src/aircraft_factory.i
+
+# target to preprocess a source file
+src/aircraft_factory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower.dir/build.make CMakeFiles/tower.dir/src/aircraft_factory.cpp.i
+.PHONY : src/aircraft_factory.cpp.i
+
+src/aircraft_factory.s: src/aircraft_factory.cpp.s
+
+.PHONY : src/aircraft_factory.s
+
+# target to generate assembly for a file
+src/aircraft_factory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower.dir/build.make CMakeFiles/tower.dir/src/aircraft_factory.cpp.s
+.PHONY : src/aircraft_factory.cpp.s
+
+src/aircraft_manager.o: src/aircraft_manager.cpp.o
+
+.PHONY : src/aircraft_manager.o
+
+# target to build an object file
+src/aircraft_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower.dir/build.make CMakeFiles/tower.dir/src/aircraft_manager.cpp.o
+.PHONY : src/aircraft_manager.cpp.o
+
+src/aircraft_manager.i: src/aircraft_manager.cpp.i
+
+.PHONY : src/aircraft_manager.i
+
+# target to preprocess a source file
+src/aircraft_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower.dir/build.make CMakeFiles/tower.dir/src/aircraft_manager.cpp.i
+.PHONY : src/aircraft_manager.cpp.i
+
+src/aircraft_manager.s: src/aircraft_manager.cpp.s
+
+.PHONY : src/aircraft_manager.s
+
+# target to generate assembly for a file
+src/aircraft_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tower.dir/build.make CMakeFiles/tower.dir/src/aircraft_manager.cpp.s
+.PHONY : src/aircraft_manager.cpp.s
+
 src/img/image.o: src/img/image.cpp.o
 
 .PHONY : src/img/image.o
@@ -322,6 +376,12 @@ help:
 	@echo "... src/aircraft.o"
 	@echo "... src/aircraft.i"
 	@echo "... src/aircraft.s"
+	@echo "... src/aircraft_factory.o"
+	@echo "... src/aircraft_factory.i"
+	@echo "... src/aircraft_factory.s"
+	@echo "... src/aircraft_manager.o"
+	@echo "... src/aircraft_manager.i"
+	@echo "... src/aircraft_manager.s"
 	@echo "... src/img/image.o"
 	@echo "... src/img/image.i"
 	@echo "... src/img/image.s"

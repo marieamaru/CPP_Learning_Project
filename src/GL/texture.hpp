@@ -1,10 +1,11 @@
 #pragma once
 
-#define GL_SILENCE_DEPRECATION
 #include "../img/image.hpp"
 #include "opengl_interface.hpp"
+
 #include <GL/glut.h>
 #include <array>
+#include <cassert>
 
 namespace GL {
 
@@ -78,7 +79,7 @@ private:
     };
 
     void draw_point(Coordinate coordinate, const Point2D& screen_pos, const Point2D& screen_dim,
-                    const size_t tile_idx) const
+                    const int tile_idx) const
     {
         const auto& tex_shift    = _texture_shifts[coordinate];
         const auto& screen_shift = _screen_shifts[coordinate];

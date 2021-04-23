@@ -16,6 +16,16 @@
 },
 {
   "directory": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build",
+  "command": "/usr/bin/clang++ -DGLUT_DISABLE_ATEXIT_HACK -isystem \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/FreeGLUT::freeglut\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks -isystem /usr/local/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wall -Wextra -Werror -Wshadow -Weffc++ -std=gnu++17 -o CMakeFiles/tower.dir/src/aircraft_manager.cpp.o -c \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft_manager.cpp\"",
+  "file": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft_manager.cpp"
+},
+{
+  "directory": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build",
+  "command": "/usr/bin/clang++ -DGLUT_DISABLE_ATEXIT_HACK -isystem \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/FreeGLUT::freeglut\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks -isystem /usr/local/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wall -Wextra -Werror -Wshadow -Weffc++ -std=gnu++17 -o CMakeFiles/tower.dir/src/aircraft_factory.cpp.o -c \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft_factory.cpp\"",
+  "file": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/aircraft_factory.cpp"
+},
+{
+  "directory": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/build",
   "command": "/usr/bin/clang++ -DGLUT_DISABLE_ATEXIT_HACK -isystem \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/FreeGLUT::freeglut\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/Frameworks -isystem /usr/local/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wall -Wextra -Werror -Wshadow -Weffc++ -std=gnu++17 -o CMakeFiles/tower.dir/src/tower_sim.cpp.o -c \"/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower_sim.cpp\"",
   "file": "/Users/macbookairdemarie/Desktop/M1/Semestre 2/C++/CPP_Learning_Project/CPP_Learning_Project/src/tower_sim.cpp"
 },
