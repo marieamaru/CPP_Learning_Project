@@ -63,6 +63,7 @@ public:
         control { control_ },
         fuel { fuel_ }
     {
+        assert(fuel_ >=0 && "fuel quantity cannot be negative");
         speed.cap_length(max_speed());
     }
 

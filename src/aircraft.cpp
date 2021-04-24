@@ -201,5 +201,5 @@ void Aircraft::refill(int& fuel_stock)
         compt++;
         fuel_stock--;
     }
-    std::cout << flight_number << "refilled with " << compt << "of fuel" << std::endl;
+    std::cout << flight_number << " refilled with " << compt << " of fuel" << std::endl;
 }

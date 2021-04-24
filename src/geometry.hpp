@@ -12,11 +12,9 @@ template <typename Element, typename... ElementType>
 class Point
 {
 public:
-    //Point() = default;
     Point(ElementType&&... args) : values { args... } { }
     Point(const ElementType&&... args) : values { args... } { }
     Point(const ElementType&... args) : values { args... } { }
-    //Point(ElementType x, ElementType y, ElementType z) : values { x, y, z } { static_assert(Size == 3); }
 
     const Element& operator[](int index) const
     {
@@ -39,46 +37,46 @@ public:
     Element& z() { static_assert(sizeof...(ElementType) >= 3); return values[2]; }
     Element z() const { static_assert(sizeof...(ElementType) >= 3); return values[2]; }
 
-    Point<Element, ElementType...>& operator+=(const Point<Element, ElementType...>& other)
-    {
-        for(size_t i = 0; i < sizeof...(ElementType); i++)
-        {
-            values[i] += other.values[i];
-        }
-        /*int nb = 0;
-        std::transform(values.begin(), values.end(), values.begin(), [&nb, other](ElementType& val){ return val + other.values[nb++];});*/
-        return *this;
-    }
-
     Point<Element, ElementType...>& operator-=(const Point<Element, ElementType...>& other)
     {
+        /*int nb = 0;
+        std::transform(values.begin(), values.end(), values.begin(), [&nb, other](ElementType& val){ return val - other.values[nb++];});*/
         for(size_t i = 0; i < sizeof...(ElementType); i++)
         {
             values[i] -= other.values[i];
         }
+        return *this;
+    }
+
+    Point<Element, ElementType...>& operator+=(const Point<Element, ElementType...>& other)
+    {
         /*int nb = 0;
-        std::transform(values.begin(), values.end(), values.begin(), [&nb, other](ElementType& val){ return val - other.values[nb++];});*/
+        std::transform(values.begin(), values.end(), values.begin(), [&nb, other](ElementType& val){ return val + other.values[nb++];});*/
+        for(size_t i = 0; i < sizeof...(ElementType); i++)
+        {
+            values[i] += other.values[i];
+        }
         return *this;
     }
 
     Point<Element, ElementType...>& operator*=(const Point<Element, ElementType...>& other)
     {
+        /*int nb = 0;
+        std::transform(values.begin(), values.end(), values.begin(), [&nb, other](ElementType& val){ return val * other.values[nb++];});*/
         for(size_t i = 0; i < sizeof...(ElementType); i++)
         {
             values[i] *= other.values[i];
         }
-        /*int nb = 0;
-        std::transform(values.begin(), values.end(), values.begin(), [&nb, other](ElementType& val){ return val * other.values[nb++];});*/
         return *this;
     }
 
     Point<Element, ElementType...>& operator*=(const Element scalar)
     {
+        //std::transform(values.begin(), values.end(), values.begin(), [scalar](ElementType& val){return val*scalar;});
         for(size_t i = 0; i < sizeof...(ElementType); i++)
         {
             values[i] *= scalar;
         }
-        //std::transform(values.begin(), values.end(), values.begin(), [scalar](ElementType& val){return val*scalar;});
         return *this;
     }
 

@@ -19,7 +19,11 @@ struct AircraftType
         max_air_speed { max_air_speed_ },
         max_accel { max_accel_ },
         texture { new img::Image { sprite.get_full_path() }, num_tiles }
-    {}
+    {
+        assert(max_ground_speed >=0.f && "cannot create AircraftType with negative ground speed");
+        assert(max_air_speed >= 0.f && "cannot create AircraftType with negative max air speed");
+        assert(max_accel >= 0.f && "cannot create AircraftType with negative acceleration");
+    }
 };
 
 constexpr int NUM_AIRCRAFT_TYPES = 3;
