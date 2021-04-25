@@ -64,6 +64,7 @@ public:
         fuel { fuel_ }
     {
         assert(fuel_ >=0 && "fuel quantity cannot be negative");
+        assert(fuel_ <= 3000 && "fuel quantity cannot be be above 3000");
         speed.cap_length(max_speed());
     }
 
